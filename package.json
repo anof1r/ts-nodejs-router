@@ -1,0 +1,17 @@
+{
+  "name": "ts-nodejs-router",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "module": "commonjs",
+  "scripts": {
+    "start": "ts-node-esm .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.8.5",
+    "typescript": "^5.2.2"
+  },
+  "author": "",
+  "license": "ISC"
+}
