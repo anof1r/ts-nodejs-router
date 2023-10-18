@@ -1,6 +1,5 @@
 import { ResponseMessage, Route, RouterRequest } from "./interfaces/router-ifs";
 import { Handler, RequestMethod } from "./interfaces/types";
-import 'dotenv/config'
 
 export class Router {
     private routes: Array<Route>
@@ -24,11 +23,9 @@ export class Router {
 
         for (const { method, url, handler } of this.routes) {
             if (method === request.method) {
-                if (request.url) {
-                    if (url === request.url) {
-                        const handlerResponse = await handler(request, request.url, response)
-                        responses.push(handlerResponse)
-                    }
+                if (url === request.url) {
+                    const handlerResponse = await handler(request, request.url, response)
+                    responses.push(handlerResponse)
                 }
             }
         }
